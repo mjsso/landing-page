@@ -1,0 +1,35 @@
+@import "src/theme";
+
+.teaser-ecosystem-section {
+    background-color: $white;
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 30px;
+        margin-top: 45px;
+        margin-bottom: 35px;
+        overflow-y: hidden;
+        transition: max-height 0.6s ease-in-out;
+
+        @media(max-width: $mobileWidth) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 8px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            max-height: 190px;
+        }
+
+        &[aria-expanded=true] {
+            max-height: 300px;
+        }
+
+    }
+
+    .lxr-button {
+        width: 186px;
+        margin-top: 10px;
+    }
+
+}

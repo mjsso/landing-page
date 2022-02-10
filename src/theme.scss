@@ -1,0 +1,80 @@
+$siteWidth: 1200px;
+$padWidth: 1024px;
+$mobileWidth: 960px;
+$smallMobileWidth: 420px;
+$topBarSize: 70px;
+$tradeSize: 436px;
+
+$cardRadius: 24px;
+$borderRadius: 12px;
+
+
+$footerSize: 100px;
+$bannerSize: 42px;
+$badgeSize: 38px;
+$chartHeight: 300px;
+$noticeHeight: 46px;
+$poolWidth: 900px;
+$dashboardCardHeight: 212px;
+
+$spacing0: 2px;
+$spacing1: 4px;
+$spacing2: 8px;
+$spacing3: 12px;
+$spacing4: 16px;
+$spacing5: 24px;
+$spacing6: 32px;
+$spacing7: 48px;
+$spacing8: 64px;
+$spacing9: 80px;
+
+$card: #0f0c0d;
+$cardDark: #1f1f1f;
+$mint: #45F2FF;
+$purple: #2b233f;
+$purpleLight: #7937d3;
+$blk: #1A1A1D;
+$cloudyWhite: #E2EAF2;
+
+$placeholderBase: #212121;
+$placeholderPoint: #424242;
+
+$base: #DBDCFF;
+$baseDark: #CFD0FF;
+$baseLight: #2c6359;
+$basePink: #FFBBD4;
+
+$grey50: #f4f4f4;
+$grey100: #f9fafb;
+$grey150: #F6F6F6;
+$grey200: #eeeeee;
+$grey250: #e2eaf2;
+$grey300: #e0e0e0;
+$grey400: #c8c8c8;
+$grey500: #999999;
+$grey600: #666666;
+$grey700: #616161;
+$grey800: #424242;
+$grey900: #262626;
+
+
+// real start
+$maxWidth: 1300px;
+
+$sampleLight: #CFD0FF;
+$sampleDark: #193362;
+$samplePrimary: #193362;
+$sampleSecondary: rgb(165, 164, 255);
+
+$cardShadow: #00000033;
+
+
+$white: #FFF;
+$black: #000;
+$blackNavy: #12223F;
+$grey1: #F8F8F8;
+$grey2: #EEEEEE;
+$grey3: #B0B0B0;
+
+// NOTE : CommunitySection에 social icon 추가할 땐 여기에 이름 추가하고, social_[로고이름].svg, social_[로고이름]_hover.svg 파일 추가하기
+$socials: 'twitter', 'discord', 'telegram', 'medium', 'github';

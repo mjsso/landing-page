@@ -1,0 +1,250 @@
+@import "src/theme";
+
+@mixin stepperLine {
+    height: 0;
+    content: '';
+    position: relative;
+    top: 5%;
+    width: 1px;
+    order: -1;
+    opacity: 0.4;
+}
+
+.line-chart-container {
+    display: flex;
+    align-items: center;
+    color: $white;
+    position: relative;
+    left: 30px;
+    top: 30px;
+
+    @media(max-width: $smallMobileWidth) {
+        left: -9px;
+        top: 35px;
+        width: 250px;
+    }
+}
+
+.c-stepper {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 700px;
+
+    > .c-stepper__item {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        position: relative;
+
+        &:nth-child(even) {
+            text-align: end;
+            right: 140px;
+            flex-direction: row-reverse;
+
+            @media(max-width: $smallMobileWidth) {
+                text-align: start;
+                flex-direction: row;
+                right: 0;
+            }
+
+            &:before {
+                right: 15px;
+                @media(max-width: $smallMobileWidth) {
+                    right: -15px;
+                }
+            }
+
+            &:after {
+                left: -20.5px;
+                @media(max-width: $smallMobileWidth) {
+                    left: 20px;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            text-align: start;
+            left: 80px;
+
+            @media(max-width: $smallMobileWidth) {
+                left: 0;
+            }
+
+            &:before {
+                right: -14px;
+                @media(max-width: $smallMobileWidth) {
+                    right: -15px;
+                }
+            }
+
+            &:after {
+                left: 19px;
+                @media(max-width: $smallMobileWidth) {
+                    left: 20px;
+                }
+            }
+        }
+
+
+        &:before {
+            --size: 0.6rem;
+            content: '';
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            margin: 0 auto;
+            background-color: $white;
+            box-shadow: 0 0 1px 4px #a5a4ff45;
+        }
+
+        &.activated:before {
+            background-color: $sampleSecondary;
+        }
+
+        &:not(:last-child):after {
+            @include stepperLine;
+            background-color: $white;
+        }
+
+        &.activated:not(:last-child):after {
+            background-color: $sampleSecondary;
+        }
+
+        &:last-child:after {
+            @include stepperLine;
+            background: linear-gradient(180deg, $white 50.94%, $samplePrimary 100%);
+        }
+    }
+
+    // Text Styles
+    .text-container {
+        padding: 0 35px;
+        opacity: 0;
+        margin-bottom: 30px;
+        max-height: 130px;
+    }
+
+    .c-stepper__title {
+        padding-bottom: 10px;
+        font-size: 18px;
+        line-height: 11px;
+        font-weight: 700;
+
+        @media(max-width: $smallMobileWidth) {
+            font-size: 16px;
+            line-height: 11px;
+        }
+
+        &.activated {
+            color: $sampleSecondary;
+        }
+
+        &.deactivated {
+            color: $white;
+        }
+    }
+
+
+    .c-stepper__desc {
+        width: 180px;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+        word-break: break-word;
+        color: $white;
+        opacity: 0.4;
+        white-space: pre-wrap;
+
+        @media(max-width: $smallMobileWidth) {
+            width: 210px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+
+
+// Stepper Animation
+$delayTerm: 0.4s;
+@keyframes fillDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+        visibility: visible;
+    }
+}
+
+@keyframes fillDownShort {
+    from {
+        height: 0;
+    }
+    to {
+        height: 60%;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin fadeInAnimation($delayTime) {
+    > .text-container {
+        animation: 0.6s forwards fadeIn;
+        animation-delay: $delayTime - 0.3s;
+    }
+
+    &:after {
+        animation: 0.6s forwards fillDown;
+        animation-delay: $delayTime;
+    }
+}
+
+@mixin fadeInAnimationShort($delayTime) {
+    > .text-container {
+        animation: 0.6s forwards fadeIn;
+        animation-delay: $delayTime - 0.3s;
+    }
+
+    &:after {
+        animation: 0.6s forwards fillDownShort;
+        animation-delay: $delayTime;
+    }
+}
+
+.step1 {
+    @include fadeInAnimation(0s);
+}
+
+.step2 {
+    @include fadeInAnimation(1*$delayTerm);
+}
+
+.step3 {
+    @include fadeInAnimation(2*$delayTerm);
+}
+
+.step4 {
+    @include fadeInAnimation(3*$delayTerm);
+}
+
+.step5 {
+    @include fadeInAnimation(4*$delayTerm);
+}
+
+.step6 {
+    @include fadeInAnimationShort(5*$delayTerm);
+}
+

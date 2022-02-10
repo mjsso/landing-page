@@ -1,0 +1,6 @@
+export { default as MainSection } from './MainSection'
+export { default as IntroductionSection } from './IntroductionSection'
+export { default as EcoSystemSection } from './EcoSystemSection'
+export { default as CommunitySection } from './CommunitySection'
+export { default as RoadmapSection } from './RoadmapSection'
+export { default as FAQSection } from './FAQSection'

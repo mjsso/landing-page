@@ -1,0 +1,19 @@
+@import 'src/theme';
+
+.footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    //min-height: 300px;
+
+    @media ($mobileWidth) {
+        min-height: 100px;
+    }
+
+    > .footer-logo {
+        width: 100px;
+        height: 100px;
+    }
+}

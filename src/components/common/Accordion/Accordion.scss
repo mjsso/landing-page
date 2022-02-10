@@ -1,0 +1,86 @@
+@import 'src/theme';
+
+.accordion {
+    width: 100%;
+
+    > .accordion-item {
+
+        padding: 24px 0;
+        border-bottom: 1px solid $grey2;
+
+
+        @media(max-width: $mobileWidth) {
+            padding: 17px 0;
+        }
+
+        > .title-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 15px;
+            text-align: start;
+
+            @media(max-width: $mobileWidth) {
+                font-size: 16px;
+                line-height: 22px;
+                height: auto;
+            }
+
+            &[aria-expanded="true"] {
+                border-bottom: 0;
+            }
+
+            > .title {
+                width: calc(100% - 45px);
+            }
+
+            > .arrow {
+                width: 25px;
+                transition: all 0.35s ease;
+
+                &[aria-expanded="true"] {
+                    transform: rotateZ(180deg);
+                }
+            }
+        }
+
+        > .content-container {
+            justify-content: center;
+            width: 100%;
+            overflow: hidden;
+            max-height: 500px;
+            transition: max-height 0.6s ease-in-out;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            opacity: 0.4;
+            text-align: start;
+
+            @media(max-width: $mobileWidth) {
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            &[aria-expanded="false"] {
+                max-height: 0;
+                transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+                border-bottom: 0;
+            }
+
+            > .content {
+                padding: 24px 0 0 0;
+                white-space: pre-line;
+
+                @media(max-width: $mobileWidth) {
+                    padding: 16px 0 0 0;
+                }
+            }
+        }
+    }
+}

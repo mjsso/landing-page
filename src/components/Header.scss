@@ -1,0 +1,56 @@
+@import 'src/theme';
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 5;
+    // NOTE : Header 상단바로 뺄 때 이 부분 주석풀기
+    //position: fixed;
+    width: 100%;
+    transition: background-color 0.25s ease 0s;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    top: -1px;
+    left: -1px;
+    //backdrop-filter: blur(4px);
+    padding: 20px 4rem;
+    color: $black;
+    background-color: rgba(255, 255, 255, 0.16);
+
+    @media (max-width: $mobileWidth) {
+        padding: 23px 1rem;
+    }
+
+    > .header-content {
+        max-width: $maxWidth;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        > .heading-logo-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            > .heading-title {
+                margin-left: 5px;
+                font-weight: 400;
+                font-size: 20px;
+                //@media(max-width: $mobileWidth) {
+                //    display: none;
+                //}
+            }
+
+            > .heading-logo {
+                width: 20px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

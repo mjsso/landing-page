@@ -1,0 +1,28 @@
+@import 'src/theme';
+
+.link-button {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $samplePrimary;
+
+    &.disabled {
+        filter: opacity(0.5);
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        .link-text {
+            text-decoration-line: underline;
+
+            &.disabled {
+                text-decoration-line: none;
+            }
+        }
+    }
+}

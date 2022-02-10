@@ -1,0 +1,31 @@
+@import "src/theme";
+
+.teaser-faq-section {
+    background-color: $white;
+    justify-content: start;
+
+    .section-content {
+        padding-bottom: 0;
+    }
+
+    .accordion-container {
+        margin-top: 20px;
+        width: 780px;
+
+        @media(max-width: $mobileWidth) {
+            width: 90%;
+        }
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        width: 128px;
+        padding: 48px 0;
+
+        @media(max-width: $mobileWidth) {
+            padding: 32px 0;
+        }
+
+    }
+}

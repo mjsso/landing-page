@@ -1,0 +1,12 @@
+@import "src/theme";
+
+.teaser-roadmap-section {
+    background-color: $sampleDark;
+
+
+    @media(max-width: $mobileWidth) {
+        .sub-title {
+            width: 300px;
+        }
+    }
+}
