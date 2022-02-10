@@ -1,8 +1,8 @@
 @import 'src/theme';
 
 .teaser-main-section {
-    background: right 0 no-repeat url("../../assets/images/main_background.png");
-
+    //background: right 0 no-repeat url("../../assets/images/main_background.png");
+    background-color: white;
 
     @media(max-width: $mobileWidth) {
         background-position: center;
@@ -36,7 +36,7 @@
             }
 
             > .keyword {
-                color: #1269b5;
+                color: #12b590;
             }
         }
 

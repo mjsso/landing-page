@@ -2,9 +2,8 @@ import React from 'react'
 import SectionContainer from 'components/common/SectionContainer'
 import SectionContent from 'components/common/SectionContent'
 import LinkButton from 'components/common/LinkButton'
-import S2W from 'assets/images/logo_s2w.svg'
-import PeckshieldIcon from 'assets/images/logo_peckshield.svg'
-import TheoriIcon from 'assets/images/logo_theori.svg'
+import SampleIcon1 from 'assets/images/beach-ball.png'
+import SampleIcon2 from 'assets/images/sea-waves.png'
 import './CommunitySection.scss'
 
 
@@ -54,20 +53,15 @@ const CommunitySection: React.FC = () => {
             </div>
             <div className='cards-container'>
                 <div className='card'>
-                    <img src={PeckshieldIcon} alt='card1' className='card-logo'/>
-                    <div className='card-description'>PeckShield is based in Beijing and San Francisco, and consist security professionals from world-leading security groups. A lot of experience in vulnerability analysis and malware defense, PeckShield provides security total solutions to all blockchain users.</div>
+                    <img src={SampleIcon1} alt='card1' className='card-logo'/>
+                    <div className='card-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
                     <LinkButton text='See report' disabled/>
                 </div>
                 <div className='card'>
-                    <img src={S2W} alt='card2' className='card-logo'/>
-                    <div className='card-description'>S2W is Big data intelligence company specialized in hidden channels and cryptocurrencies. On March 20, International Criminal Police Organization (Interpol) has announced a partnership with S2W Lab, to analyze dark web activity, including cryptocurrency transactions.</div>
+                    <img src={SampleIcon2} alt='card2' className='card-logo'/>
+                    <div className='card-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
                     <LinkButton text='See report' disabled/>
                 </div>
-                {/*<div className='card'>*/}
-                {/*    <img src={TheoriIcon} alt='card3' className='card-logo'/>*/}
-                {/*    <div className='card-description'>Theori, a cybersecurity startup based in Austin, was founded by a team of hackers from Carnegie Mellon University who have conquered DEFCON CTF five times and many other international competitions. The performance of Theori about consulting and penetration testing is already world-class.</div>*/}
-                {/*    <LinkButton text='See report' disabled/>*/}
-                {/*</div>*/}
             </div>
         </SectionContent>
     </SectionContainer>
